@@ -1,0 +1,8 @@
+name: Lockedpunish
+version: '${project.version}'
+main: com.foxdev.lockedpunish.Lockedpunish
+
+commands:
+  punish:
+    description: Punish system
+    permission: locked.punish
