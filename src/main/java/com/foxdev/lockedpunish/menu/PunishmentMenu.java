@@ -1,6 +1,5 @@
 package com.foxdev.lockedpunish.menu;
 
-
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -9,7 +8,11 @@ import org.bukkit.inventory.ItemStack;
 
 public class PunishmentMenu {
 
-    private String target;
+    private final Player target;
+
+    public PunishmentMenu(Player target) {
+        this.target = target;
+    }
 
     public void openPunishmentMenu(Player player) {
         Inventory inventory = Bukkit.createInventory(null, 9, "Punish inventory");
@@ -21,6 +24,10 @@ public class PunishmentMenu {
     }
 
     public String getTarget() {
+        return target.getName();
+    }
+
+    public Player getTargetPlayer() {
         return target;
     }
 

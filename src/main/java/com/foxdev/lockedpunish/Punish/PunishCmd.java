@@ -1,5 +1,6 @@
 package com.foxdev.lockedpunish.Punish;
 
+import com.foxdev.lockedpunish.menu.menu.chat.ChatMenu;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -30,7 +31,7 @@ public class PunishCmd implements CommandExecutor {
 
         });
 
-        player.openInventory(inv);
+        new ChatMenu(player).openMenu(player);
 
         return true;
     }
